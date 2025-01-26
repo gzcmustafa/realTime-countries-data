@@ -45,11 +45,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen ">
         <Navbar/>
-        <main className="flex-1 container mx-auto mt-[72px] md:mt-24 px-4">
-          <Outlet />
-        </main>
+          <div>
+            <Outlet/>
+          </div>
     </div>
   );
 }
