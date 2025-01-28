@@ -5,7 +5,7 @@ export default [
     route("about","routes/about.tsx"),
 
     ...prefix("countries",[
-        index("routes/countries.tsx"),  // if there isn't path we'll use index , if there is a path name we'll use route.
+        index("routes/countries.tsx"),  
         route(":countryName","routes/country.tsx")    
     ])
 
