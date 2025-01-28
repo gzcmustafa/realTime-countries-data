@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className=" container px-40 mx-auto bg-gradient-to-b from-white to-gray-50">
   
-      <section className="container mx-auto px-4 pt-20 lg:pt-32">
+      <section className="container mx-auto px-4 pt-12">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">

@@ -43,7 +43,7 @@
 
                 </select>
             </div>
-            <div className="grid grid-cols-3 gap-4 container px-40 mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 container px-40 mx-auto">
             { filteredCountries.length === 0 ? (
                 <div className="col-span-3 text-center py-10">
 
