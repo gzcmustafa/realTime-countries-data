@@ -6,7 +6,7 @@ export default [
 
     ...prefix("countries",[
         index("routes/countries.tsx"),  
-        route(":countryName","routes/country.tsx")    
+        route(":countryCode","routes/country.tsx")    
     ])
 
  
