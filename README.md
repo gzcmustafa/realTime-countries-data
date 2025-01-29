@@ -2,6 +2,10 @@
 
 An interactive web application that provides detailed information about countries worldwide.
 
+## Preview
+
+![Home Page](.github/assets/Animation.gif)
+
 
 ## Features
 
@@ -37,6 +41,4 @@ npm install
 npm start
 ```
 
-## Preview
 
-![Home Page](.github/assets/Animation.gif)
