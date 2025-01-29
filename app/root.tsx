@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 import Navbar from "./components/navbar/Navbar";
+import { ThemeProvider } from "./context/ThemeContext";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -40,7 +41,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           crossOrigin=""
         />
       </head>
-      <body>
+      <body className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text transition-colors duration-200">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -51,12 +52,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <div className="min-h-screen ">
-        <Navbar/>
-          <div>
-            <Outlet/>
-          </div>
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-light-background dark:bg-dark-background transition-colors duration-200">
+        <Navbar />
+        <main className=" text-light-text dark:text-dark-text bg-light-background dark:bg-dark-background container mx-auto px-4 py-8">
+          <Outlet />
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
 

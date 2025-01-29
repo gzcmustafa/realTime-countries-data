@@ -21,8 +21,7 @@ interface CountryProps {
 
 export default function CardCountries({country}: CountryProps) {
   return (
-    <>
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+    <div className="max-w-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
         <Link to={`/countries/${country.cca3.toLowerCase()}`}> 
             <div className="h-48 w-full overflow-hidden">
                 <img 
@@ -33,10 +32,10 @@ export default function CardCountries({country}: CountryProps) {
             </div>
         </Link>
         <div className="p-5">
-            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
+            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {country.name.common} ({country.cca3})
             </h5>
-            <div className="space-y-2 text-gray-600">
+            <div className="space-y-2 text-gray-600 dark:text-gray-300">
                 <p><strong>Timezones:</strong> {country.timezones.join(", ")}</p>
                 
 
@@ -47,6 +46,5 @@ export default function CardCountries({country}: CountryProps) {
             </div>
         </div>
     </div>
-    </>
   )
 }

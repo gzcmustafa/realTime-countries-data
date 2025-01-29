@@ -60,17 +60,20 @@ export default function Country ({loaderData}:Route.ComponentProps) {
 
                     
                     <img src={country.flags.png} alt={`${country.name.common} flag`} width={200} className="mb-4" />
+                    <p><strong className="font-semibold">Land Area:</strong> {country.area.toLocaleString()} km²</p>
 
                     <p className="mb-2"><strong>Capital:</strong> {country.capital?.[0]}</p>
+                    
+                
 
                     <p className="mb-2"><strong>Region:</strong> {country.region}</p>
-
-                    <p className="mb-2"><strong>Population:</strong> {country.population.toLocaleString()}</p>
-
-                 
-                    <p className="mb-2"><strong>Languages:</strong> {Object.values(country.languages).join(", ")}</p>
-
+    
                     
+    
+                    <p className="mb-2"><strong>Population:</strong> {country.population.toLocaleString()}</p>
+                
+                    <p className="mb-2"><strong>Languages:</strong> {Object.values(country.languages).join(", ")}</p>
+        
                     <p className="mb-2"><strong>Currencies:</strong> {Object.values(country.currencies).map((c:any) => c.name).join(", ")}</p>
 
                     <p className="mb-2"><strong>Car Signs:</strong> {country.car.signs?.[0]}</p>
