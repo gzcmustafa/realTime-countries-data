@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <nav className="bg-light-primary dark:bg-dark-primary shadow-lg transition-colors duration-200">
             <div className="container px-40 mx-auto">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex flex-col items-center  lg:flex-row  lg:items-center lg:justify-between lg:h-16">
                     <NavLink to="/" className="flex items-center">
                         <img 
                             className="h-[70px] w-auto" 
@@ -19,7 +19,7 @@ export default function Navbar() {
                         </span>
                     </NavLink>
 
-                    <div className="hidden md:flex items-center space-x-4">
+                    <div className="hidden sm:flex sm:text-xs lg:flex items-center space-x-4">
                         <NavLink
                             to="/"
                             className={({ isActive }) =>

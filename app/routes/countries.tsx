@@ -27,13 +27,13 @@
             <h2 className="w-full container px-40 mx-auto text-center p-6 text-3xl "> Hello World!</h2>
             <div className=" flex justify-center items-center container gap-4 mx-auto p-4 mb-16">
                 <input 
-                    className=" border border-blue-400 rounded-xl p-1 " 
+                    className=" border border-blue-400 rounded-xl p-1 dark:bg-gray-900 dark:border-white" 
                     type="text" 
                     placeholder="Search..." 
                     value={search}
                     onChange={(e)=>(setSearch(e.target.value))}
                     />
-                <select className="border p-1 border-blue-400" value={region} onChange={(e)=> setRegion(e.target.value)}>
+                <select className=" dark:bg-gray-900 dark:border-white border p-1 border-blue-400" value={region} onChange={(e)=> setRegion(e.target.value)}>
                     <option value="">All Regions</option>
                     <option value="africa">Africa</option>
                     <option value="americas">Americas</option>
